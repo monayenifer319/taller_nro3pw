@@ -12,7 +12,7 @@
 */
 
 Route::resource('usuarios', 'UsuarioController');
-Route::resource('productos', 'productosController');
+Route::resource('productos', 'productoController');
 Route::resource('compras', 'compraController');
 Route::resource('facturas', 'facturaController');
 Route::get('usuario/eliminar/{id}', 'usuarioController@destroy');

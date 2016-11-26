@@ -5,7 +5,7 @@
     <ol class="breadcrumb">
         <li><a href="{{url('/')}}">Inicio</a></li>
         <li><a href="{{route('productos.index')}}">Productos</a></li>
-        <li class="active">Crear producto</li>
+        <li class="active">Crear productos</li>
     </ol>
     <!-- Formulario -->
     <div class="col-md-8 col-md-offset-2">
@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <button type="submit" class="btn btn-primary">Crear Usuario</button>
+                <button type="submit" class="btn btn-primary">Crear producto</button>
                 <a href="{{route('productos.index')}}" class="btn btn-danger">Volver Atrás</a>
             </div>
         </form>

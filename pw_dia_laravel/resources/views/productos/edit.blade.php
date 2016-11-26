@@ -1,11 +1,11 @@
 @extends('layouts.plantilla')
-@section('titulo', 'Crear producto')
+@section('titulo', 'Crear productos')
 @section('contenido')
     <h1 class="text-center">Crear productos</h1>
     <ol class="breadcrumb">
         <li><a href="{{url('/')}}">Inicio</a></li>
-        <li><a href="{{route('productos.index')}}">Producto</a></li>
-        <li class="active">Editar producto</li>
+        <li><a href="{{route('productos.index')}}">Productos</a></li>
+        <li class="active">Editar productos</li>
     </ol>
     <!-- Formulario -->
     <div class="col-md-8 col-md-offset-2">
@@ -68,7 +68,7 @@
             </div>
             <div class="text-center">
                 <button type="submit" class="btn btn-success">Editar producto</button>
-                <a href="{{route('producto.index')}}" class="btn btn-danger">Volver Atrás</a>
+                <a href="{{route('productos.index')}}" class="btn btn-danger">Volver Atrás</a>
             </div>
         </form>
     </div>

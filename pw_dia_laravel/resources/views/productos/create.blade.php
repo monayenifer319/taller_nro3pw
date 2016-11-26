@@ -1,5 +1,5 @@
 @extends('layouts.plantilla')
-@section('titulo', 'Crear productos')
+@section('titulo', 'Crear producto')
 @section('contenido')
     <h1 class="text-center">Crear Producto</h1>
     <ol class="breadcrumb">
