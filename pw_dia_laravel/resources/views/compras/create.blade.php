@@ -1,0 +1,54 @@
+@extends('layouts.plantilla')
+@section('titulo', 'Crear compra')
+@section('contenido')
+    <h1 class="text-center">Crear compras</h1>
+    <ol class="breadcrumb">
+        <li><a href="{{url('/')}}">Inicio</a></li>
+        <li><a href="{{route('compras.index')}}">Compras</a></li>
+        <li class="active">Crear compras</li>
+    </ol>
+    <!-- Formulario -->
+    <div class="col-md-8 col-md-offset-2">
+        <form action="{{route('compras.store')}}" method="POST">
+            {{csrf_field()}}
+            <div class="form-group{{ $errors->has('fecha_registro') ? ' has-error' : '' }}">
+                <div class="form-group">
+                    <label>fecha de registro</label>
+                    <input type="text" value="{{old('fecha_registro')}}" name="fecha_registro" required class="form-control" placeholder="Ingrese la fecha de registro">
+                    @if ($errors->has('fecha_registro'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('fecha_registro') }}</strong>
+                        </span>
+                    @endif
+                </div>
+            </div>
+            <div class="form-group{{ $errors->has('valor') ? ' has-error' : '' }}">
+                <div class="form-group">
+                    <label>Valor</label>
+                    <input type="text" value="{{old('valor')}}" name="valor" required class="form-control" placeholder="Ingrese el valoro">
+                    @if ($errors->has('valor'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('valor') }}</strong>
+                        </span>
+                    @endif
+                </div>
+            </div>
+            <div class="form-group{{ $errors->has('cantidad') ? ' has-error' : '' }}">
+                <div class="form-group">
+                    <label>Cantidad</label>
+                    <input type="text" value="{{old('cantidad')}}" name="cantidad" required class="form-control" placeholder="Ingrese la cantidad">
+                    @if ($errors->has('cantidad'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('cantidad') }}</strong>
+                        </span>
+                    @endif
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Crear compra</button>
+                <a href="{{route('compras.index')}}" class="btn btn-danger">Volver Atrás</a>
+            </div>
+        </form>
+    </div>
+    <!-- Fin Formulario-->
+@endsection
